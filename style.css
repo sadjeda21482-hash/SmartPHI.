@@ -1572,12 +1572,20 @@
   }
   
   .site-header .brand-logo {
-    width: 300px !important;
-    height: 200px !important;
-    max-width: none !important;
-    object-fit: contain;
-    display: block;
-  }
+width: 45px !important;
+height: 45px !important;
+max-width: 100% !important;
+object-fit: contain;
+display: block;
+flex-shrink: 0;
+}
+
+@media (max-width: 700px) {
+.site-header .brand-logo {
+width: 36px !important;
+height: 36px !important;
+}
+}  }
   /* PHARAMI KIDS INTERACTIVE WINDOW */
 
 .pharami-modal[hidden] {
