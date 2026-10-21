@@ -1548,8 +1548,8 @@
     }
   }
   .brand-logo {
-    width: 46px;
-    height: 46px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
     display: block;
     flex-shrink: 0;
@@ -1572,8 +1572,8 @@
   }
   
   .site-header .brand-logo {
-width: 45px !important;
-height: 45px !important;
+width: 100px !important;
+height: 100px !important;
 max-width: 100% !important;
 object-fit: contain;
 display: block;
