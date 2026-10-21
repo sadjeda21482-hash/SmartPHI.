@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E5F59">
+  <title>Mon espace | SmartPHI</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #F7FBF9, #FCEAF3);
+    }
+
+    .auth-page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 35px 16px;
+    }
+
+    .auth-card {
+      width: min(100%, 460px);
+      padding: 35px;
+      background: white;
+      border: 1px solid #E7ECE9;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(30, 95, 89, .10);
+    }
+
+    .auth-brand {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
+    .auth-heading {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .auth-heading h1 {
+      color: #1E5F59;
+      font-size: 29px;
+      margin-bottom: 8px;
+    }
+
+    .auth-heading p {
+      color: #71817D;
+      font-size: 14px;
+    }
+
+    .auth-tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 5px;
+      background: #F1F6F3;
+      border-radius: 12px;
+      margin-bottom: 24px;
+    }
+
+    .auth-tabs button {
+      border: 0;
+      border-radius: 9px;
+      padding: 11px 6px;
+      background: transparent;
+      color: #536460;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    .auth-tabs button.active {
+      background: #1E5F59;
+      color: white;
+    }
+
+    .auth-form {
+      display: grid;
+      gap: 15px;
+    }
+
+    .auth-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: #253A38;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .auth-form input,
+    .auth-form select {
+      width: 100%;
+      min-height: 47px;
+      padding: 12px;
+      border: 1px solid #DCE7E2;
+      border-radius: 10px;
+      background: white;
+      color: #253A38;
+      font: inherit;
+      font-size: 14px;
+    }
+
+    .auth-form input:focus,
+    .auth-form select:focus {
+      outline: 2px solid #1E5F59;
+      outline-offset: 1px;
+    }
+
+    .auth-submit {
+      width: 100%;
+      min-height: 49px;
+      margin-top: 5px;
+      border: 0;
+      border-radius: 11px;
+      background: #1E5F59;
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .auth-submit:hover {
+      background: #164943;
+    }
+
+    .auth-message {
+      color: #1E5F59;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .auth-note {
+      margin-top: 20px;
+      color: #71817D;
+      font-size: 11px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .auth-back {
+      display: block;
+      margin-top: 18px;
+      color: #1E5F59;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 480px) {
+      .auth-card {
+        padding: 25px 20px;
+      }
+    }
+    .auth-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-logo {
+  display: block;
+  width: 190px;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+  </style>
+</head>
+
+<body>
+  <main class="auth-page">
+    <section class="auth-card">
+        <div class="auth-brand">
+            <a href="index.html" class="auth-logo-link">
+              <img src="pharma1.png"
+                src="images/smartphi-logo.png"
+                alt="SmartPHI"
+                class="auth-logo"
+              >
+            </a>
+          </div>
+
+      <div class="auth-heading">
+        <h1 id="formTitle">Bienvenue !</h1>
+        <p id="formSubtitle">Créez votre espace santé personnel.</p>
+      </div>
+
+      <div class="auth-tabs">
+        <button type="button" class="active" id="registerTab">
+          Créer un compte
+        </button>
+        <button type="button" id="loginTab">
+          Se connecter
+        </button>
+      </div>
+
+      <form class="auth-form" id="authForm">
+        <div id="nameGroup">
+          <label for="fullName">Nom et prénom</label>
+          <input id="fullName" name="fullName" autocomplete="name"
+            placeholder="Votre nom complet">
+        </div>
+
+        <div>
+          <label for="method">Méthode de connexion</label>
+          <select id="method" name="method">
+            <option value="email">Adresse e-mail</option>
+            <option value="phone">Numéro de téléphone</option>
+          </select>
+        </div>
+
+        <div id="emailGroup">
+          <label for="email">Adresse e-mail</label>
+          <input id="email" name="email" type="email"
+            autocomplete="email" placeholder="exemple@email.com">
+        </div>
+
+        <div id="phoneGroup" hidden>
+          <label for="phone">Numéro de téléphone</label>
+          <input id="phone" name="phone" type="tel"
+            autocomplete="tel" placeholder="+213 ...">
+        </div>
+
+        <div>
+          <label for="password">Mot de passe</label>
+          <input id="password" name="password" type="password"
+            autocomplete="new-password" minlength="8"
+            placeholder="Au moins 8 caractères" required>
+        </div>
+
+        <div id="profileGroup">
+          <label for="profile">Pour qui utilisez-vous SmartPHI ?</label>
+          <select id="profile" name="profile">
+            <option value="self">Pour moi-même</option>
+            <option value="child">Pour mon enfant</option>
+            <option value="relative">Pour un proche</option>
+          </select>
+        </div>
+
+        <button type="submit" class="auth-submit" id="submitBtn">
+          Créer mon compte
+        </button>
+
+        <p class="auth-message" id="authMessage" role="status"></p>
+      </form>
+
+      <p class="auth-note">
+        La protection de vos données est essentielle.
+        Cette interface est une maquette et ne crée pas encore
+        de compte réel.
+      </p>
+
+      <a href="index.html" class="auth-back">← Retour à l'accueil</a>
+    </section>
+  </main>
+<script type="module">
+    import {
+      createUserWithEmailAndPassword,
+      signInWithEmailAndPassword,
+      updateProfile
+    } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
+  
+    import { auth } from "./firebase.js";
+  
+    const registerTab = document.getElementById("registerTab");
+    const loginTab = document.getElementById("loginTab");
+    const method = document.getElementById("method");
+    const emailGroup = document.getElementById("emailGroup");
+    const phoneGroup = document.getElementById("phoneGroup");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const password = document.getElementById("password");
+    const nameGroup = document.getElementById("nameGroup");
+    const profileGroup = document.getElementById("profileGroup");
+    const fullName = document.getElementById("fullName");
+    const form = document.getElementById("authForm");
+    const message = document.getElementById("authMessage");
+    const title = document.getElementById("formTitle");
+    const subtitle = document.getElementById("formSubtitle");
+    const submitBtn = document.getElementById("submitBtn");
+  
+    let mode = "register";
+  
+    function updateMethod() {
+      const usingPhone = method.value === "phone";
+  
+      emailGroup.hidden = usingPhone;
+      phoneGroup.hidden = !usingPhone;
+  
+      email.required = !usingPhone;
+      phone.required = usingPhone;
+  
+      email.disabled = usingPhone;
+      phone.disabled = !usingPhone;
+  
+      password.autocomplete =
+        mode === "register" ? "new-password" : "current-password";
+  
+      message.textContent = "";
+    }
+  
+    function setMode(newMode) {
+      mode = newMode;
+      const registering = mode === "register";
+  
+      registerTab.classList.toggle("active", registering);
+      loginTab.classList.toggle("active", !registering);
+  
+      nameGroup.hidden = !registering;
+      profileGroup.hidden = !registering;
+      fullName.required = registering;
+  
+      title.textContent = registering
+        ? "Bienvenue !"
+        : "Heureux de vous revoir !";
+  
+      subtitle.textContent = registering
+        ? "Créez votre espace santé personnel."
+        : "Connectez-vous à votre espace SmartPHI.";
+  
+      submitBtn.textContent = registering
+        ? "Créer mon compte"
+        : "Se connecter";
+  
+      password.minLength = registering ? 8 : 1;
+      password.autocomplete = registering
+        ? "new-password"
+        : "current-password";
+  
+      message.textContent = "";
+      updateMethod();
+    }
+  
+    function showError(error) {
+      const errors = {
+        "auth/email-already-in-use":
+          "Cette adresse e-mail possède déjà un compte.",
+        "auth/invalid-email":
+          "L'adresse e-mail saisie n'est pas valide.",
+        "auth/weak-password":
+          "Choisissez un mot de passe d'au moins 8 caractères.",
+        "auth/invalid-credential":
+          "E-mail ou mot de passe incorrect.",
+        "auth/user-not-found":
+          "Aucun compte trouvé avec ces informations.",
+        "auth/wrong-password":
+          "Le mot de passe est incorrect.",
+        "auth/too-many-requests":
+          "Trop de tentatives. Réessayez plus tard.",
+        "auth/network-request-failed":
+          "Problème de connexion Internet. Réessayez."
+      };
+  
+      message.textContent =
+        errors[error.code] ||
+        "Une erreur est survenue. Vérifiez votre connexion et la configuration Firebase.";
+  
+      console.error("Erreur Firebase :", error.code, error.message);
+    }
+  
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      message.textContent = "";
+  
+      if (method.value === "phone") {
+        message.textContent =
+          "La connexion par SMS sera activée dans la prochaine étape. Pour l'instant, choisissez Adresse e-mail.";
+        return;
+      }
+  
+      const emailValue = email.value.trim();
+      const passwordValue = password.value;
+  
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Veuillez patienter...";
+  
+      try {
+        if (mode === "register") {
+          const result = await createUserWithEmailAndPassword(
+            auth,
+            emailValue,
+            passwordValue
+          );
+  
+          const name = fullName.value.trim();
+  
+          if (name) {
+            await updateProfile(result.user, {
+              displayName: name
+            });
+          }
+  
+          message.textContent =
+            "Compte créé avec succès ! Vous êtes connecté à SmartPHI.";
+        } else {
+          await signInWithEmailAndPassword(
+            auth,
+            emailValue,
+            passwordValue
+          );
+  
+          message.textContent =
+            "Connexion réussie ! Bienvenue dans SmartPHI.";
+        }
+      } catch (error) {
+        showError(error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent =
+          mode === "register" ? "Créer mon compte" : "Se connecter";
+      }
+    });
+  
+    method.addEventListener("change", updateMethod);
+    registerTab.addEventListener("click", () => setMode("register"));
+    loginTab.addEventListener("click", () => setMode("login"));
+  
+    setMode("register");
+  </script>
+  
+</body>
+</html>

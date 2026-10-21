@@ -1,0 +1,422 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E5F59">
+  <meta name="description" content="SmartPHI, votre assistant intelligent pour mieux comprendre vos médicaments.">
+  <title>SmartPHI | Votre assistant pharmaceutique</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+        <a href="#accueil" class="brand">
+            <img src="pharma1.png" alt="Logo SmartPHI" class="brand-logo">
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#services">Nos services</a>
+        <a href="#fonctionnement">Comment ça marche ?</a>
+        <a href="#pharami">PHARAMI Kids</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="language-btn" id="languageBtn" type="button">FR ▾</button>
+        <a class="btn btn-primary btn-small" href="auth.html">
+            Mon espace
+          </a> 
+        
+      </div>
+      </header>
+  <main>
+    <section class="hero-section" id="accueil">
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <span class="hero-kicker">Votre santé, notre priorité</span>
+
+          <h1>
+            Vos médicaments,
+            <span class="highlight-text">en toute simplicité.</span>
+          </h1>
+
+          <p class="hero-description">
+            SmartPHI vous accompagne pour mieux comprendre vos médicaments,
+            organiser vos prises et accéder facilement aux informations
+            pharmaceutiques.
+          </p>
+
+          <div class="hero-buttons">
+            <a class="btn btn-primary" href="#services">Découvrir nos services</a>
+            <a class="btn btn-secondary" href="#fonctionnement">Comment ça marche ?</a>
+          </div>
+
+          <div class="hero-points">
+            <span>✓ Informations accessibles</span>
+            <span>✓ Suivi des prises</span>
+            <span>✓ Assistant intelligent</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Mascotte robot SmartPHI">
+          <div class="hero-orbit orbit-one"></div>
+          <div class="hero-orbit orbit-two"></div>
+
+          <div class="hero-robot">
+            <div class="robot-antenna"></div>
+            <div class="robot-head">
+              <div class="robot-ear ear-left"></div>
+              <div class="robot-ear ear-right"></div>
+              <div class="robot-face">
+                <span class="robot-eye"></span>
+                <span class="robot-eye"></span>
+                <span class="robot-smile"></span>
+              </div>
+              <span class="robot-cheek cheek-left"></span>
+              <span class="robot-cheek cheek-right"></span>
+            </div>
+            <div class="robot-neck"></div>
+            <div class="robot-body">
+              <span class="robot-heart">+</span>
+              <span class="robot-body-label">PHI</span>
+            </div>
+            <div class="robot-arm arm-left"></div>
+            <div class="robot-arm arm-right"></div>
+            <div class="robot-leg leg-left"></div>
+            <div class="robot-leg leg-right"></div>
+          </div>
+
+          <div class="floating-card card-safe">
+            <span class="floating-icon">✓</span>
+            <span>Votre santé avant tout</span>
+          </div>
+
+          <div class="floating-card card-smart">
+            <span class="floating-icon">✦</span>
+            <span>Smart assistance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section values-section" id="valeurs">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Notre engagement</span>
+          <h2>La santé, rendue plus <span class="highlight-text">simple.</span></h2>
+          <p>Une expérience pensée pour vous accompagner au quotidien.</p>
+        </div>
+
+        <div class="values-grid">
+          <article class="value-card">
+            <span class="feature-icon">✦</span>
+            <h3>Innovation</h3>
+            <p>Une approche numérique pour faciliter l'accès à l'information pharmaceutique.</p>
+          </article>
+
+          <article class="value-card">
+            <span class="feature-icon">♡</span>
+            <h3>Simplicité</h3>
+            <p>Une interface claire et accessible à différents profils de patients.</p>
+          </article>
+
+          <article class="value-card">
+            <span class="feature-icon">✓</span>
+            <h3>Sécurité</h3>
+            <p>La prudence et la vérification des informations sont au cœur du projet.</p>
+          </article>
+
+          <article class="value-card">
+            <span class="feature-icon">◷</span>
+            <h3>Accompagnement</h3>
+            <p>Des outils pour mieux organiser les prises et les habitudes de traitement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section how-section" id="fonctionnement">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Simple et pratique</span>
+          <h2>Comment utiliser <span class="highlight-text">SmartPHI ?</span></h2>
+          <p>Quelques étapes pour découvrir les outils de votre assistant pharmaceutique.</p>
+        </div>
+
+        <div class="steps-grid">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-icon">♙</div>
+            <h3>Créez votre profil</h3>
+            <p>Choisissez le profil adapté à la personne concernée.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">02</span>
+            <div class="step-icon">⌕</div>
+            <h3>Recherchez un médicament</h3>
+            <p>Explorez le catalogue ou essayez la reconnaissance par photo.</p>
+          </article>
+
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-icon">◷</div>
+            <h3>Organisez vos prises</h3>
+            <p>Préparez des rappels pour mieux suivre votre traitement.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-kicker">Nos fonctionnalités</span>
+          <h2>Tout ce dont vous avez besoin, <span class="highlight-text">au même endroit.</span></h2>
+          <p>Découvrez les fonctionnalités prévues dans le prototype SmartPHI.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon">⌕</div>
+            <h3>Recherche de médicaments</h3>
+            <p>Recherchez un médicament par son nom ou testez la reconnaissance par photo.</p>
+            <button class="text-link service-btn" data-service="search" type="button">
+              Découvrir <span>→</span>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">▤</div>
+            <h3>Catalogue pharmaceutique</h3>
+            <p>Consultez les informations disponibles sur les médicaments et leurs précautions.</p>
+            <button class="text-link service-btn" data-service="catalogue" type="button">
+              Découvrir <span>→</span>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◷</div>
+            <h3>Rappels de prise</h3>
+            <p>Organisez des rappels pour vous aider à suivre les horaires prescrits.</p>
+            <button class="text-link service-btn" data-service="reminders" type="button">
+              Découvrir <span>→</span>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">⇄</div>
+            <h3>Interactions médicamenteuses</h3>
+            <p>Un outil d'aide à la vérification des interactions à développer et à valider.</p>
+            <button class="text-link service-btn" data-service="interactions" type="button">
+              Découvrir <span>→</span>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">✚</div>
+            <h3>Alternatives génériques</h3>
+            <p>Explorez les informations sur les génériques, avec validation par un pharmacien.</p>
+            <button class="text-link service-btn" data-service="generics" type="button">
+              Découvrir <span>→</span>
+            </button>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon">◎</div>
+            <h3>Profil du patient</h3>
+            <p>Une conception qui tient compte de l'âge et des situations particulières.</p>
+            <button class="text-link service-btn" data-service="profile" type="button">
+              Découvrir <span>→</span>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pharami-section" id="pharami">
+      <div class="container pharami-layout">
+        <div class="pharami-visual">
+          <div class="pharami-glow"></div>
+          <div class="pharami-robot">
+            <div class="pharami-antenna"></div>
+            <div class="pharami-head">
+              <div class="pharami-face">
+                <span></span><span></span>
+                <i></i>
+              </div>
+            </div>
+            <div class="pharami-body">
+              <span>PH</span>
+              <b>+</b>
+            </div>
+            <div class="pharami-foot"></div>
+          </div>
+          <span class="kids-decoration decoration-star">✦</span>
+          <span class="kids-decoration decoration-heart">♡</span>
+        </div>
+
+        <div class="pharami-copy">
+          <span class="section-kicker">Apprendre en s'amusant</span>
+          <h2>Voici <span class="highlight-text">PHARAMI Kids</span> !</h2>
+          <p>
+            Un petit robot éducatif conçu pour aider les enfants à découvrir
+            leur corps, comprendre le rôle des médicaments et apprendre les
+            bons gestes de santé à travers des histoires et des activités.
+          </p>
+
+          <ul class="pharami-list">
+            <li>Découvrir les organes du corps humain</li>
+            <li>Comprendre pourquoi on tombe malade</li>
+            <li>Apprendre à utiliser les médicaments en sécurité</li>
+            <li>Découvrir des histoires et des jeux éducatifs</li>
+          </ul>
+
+          <button class="btn btn-primary" id="pharamiBtn" type="button">
+            Découvrir PHARAMI
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section safety-section">
+      <div class="container safety-content">
+        <span class="safety-symbol">!</span>
+        <div>
+          <h2>La sécurité avant tout</h2>
+          <p>
+            SmartPHI est un outil d'information et d'accompagnement.
+            Il ne remplace ni l'avis d'un médecin ou d'un pharmacien,
+            ni une ordonnance. Toute information médicale doit être vérifiée
+            avant utilisation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro">
+          <span class="section-kicker">Besoin d'aide ?</span>
+          <h2>Questions <span class="highlight-text">fréquentes</span></h2>
+          <p>Quelques réponses pour mieux comprendre le projet SmartPHI.</p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>SmartPHI est-il déjà entièrement fonctionnel ?</summary>
+            <p>Cette version est un prototype. Certaines fonctionnalités nécessitent encore un développement et des tests.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>SmartPHI peut-il remplacer un pharmacien ?</summary>
+            <p>Non. Il vise à faciliter l'accès à l'information, sans remplacer les conseils d'un professionnel de santé.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Peut-on rechercher un médicament par photo ?</summary>
+            <p>La reconnaissance par photo est une fonctionnalité prévue. Le résultat devra toujours être vérifié avant toute utilisation.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>À qui s'adresse SmartPHI ?</summary>
+            <p>Le projet vise les patients, les familles et les personnes qui souhaitent mieux organiser leur suivi médicamenteux.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-card">
+        <div>
+          <span class="section-kicker">Restons connectés</span>
+          <h2>Une pharmacie plus simple, plus accessible.</h2>
+          <p>SmartPHI : l'innovation au service de votre santé.</p>
+        </div>
+        <a href="#accueil" class="btn btn-light">Retour à l'accueil ↑</a>
+      </div>
+    </section>
+  </main>
+  <!-- PHARAMI KIDS MODAL -->
+<div class="pharami-modal" id="pharamiModal" hidden>
+  <div class="pharami-window" role="dialog"
+       aria-modal="true" aria-labelledby="pharamiTitle">
+
+    <button class="pharami-close" id="closePharami"
+            type="button" aria-label="Fermer">×</button>
+
+    <div class="pharami-avatar">🤖</div>
+
+    <span class="section-kicker">PHARAMI KIDS</span>
+
+    <h2 id="pharamiTitle">
+      Salut, petit explorateur ! 💚
+    </h2>
+
+    <p id="pharamiMessage">
+      Je suis PHARAMI ! Ensemble, découvrons le monde
+      de la santé et apprenons à prendre soin de nous.
+    </p>
+
+    <div class="pharami-activities">
+
+      <button type="button" class="pharami-choice"
+              data-pharami="body">
+        🫀 Découvrir le corps humain
+      </button>
+
+      <button type="button" class="pharami-choice"
+              data-pharami="medicine">
+        💊 Apprendre les règles de sécurité
+      </button>
+
+      <button type="button" class="pharami-choice"
+              data-pharami="quiz">
+        ⭐ Jouer et apprendre
+      </button>
+
+    </div>
+
+    <div class="pharami-response" id="pharamiResponse"
+         aria-live="polite">
+      Choisis une activité pour commencer !
+    </div>
+
+    <button type="button" class="btn btn-primary"
+            id="pharamiSpeak">
+      🔊 Écouter PHARAMI
+    </button>
+
+    <p class="pharami-disclaimer">
+      Activité éducative pour enfants, à utiliser avec un adulte.
+      Ne prends jamais un médicament sans l'autorisation d'un adulte.
+    </p>
+
+  </div>
+</div>
+
+  <footer class="site-footer">
+    <div class="container header-inner">
+    
+<a href="#accueil" class="brand">
+    <img src="pharma1.png" alt="Logo SmartPHI" class="brand-logo">
+  </a>
+
+      <p>© 2026 SmartPHI — Prototype de projet pharmaceutique.</p>
+      <a href="#faq">Questions fréquentes</a>
+    </div>
+  </footer>
+
+  <button class="assistant-bubble" id="assistantBtn" type="button"
+    aria-label="Ouvrir l'assistant SmartPHI">
+    <span>✦</span>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
